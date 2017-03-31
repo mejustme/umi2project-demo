@@ -1,0 +1,32 @@
+{
+    "name": "module-column",
+    "version": "0.0.1",
+    "description": "module column project",
+    "directories": {
+        "test": "test"
+    },
+    "scripts": {
+        "test": "mocha-phantomjs test/test.html",
+        "lint": "eslint src/**/*.js",
+        "css": "sass -I ./lib/ --update src:src -f --scss && sass -I ./lib --watch --scss --no-cache --unix-newlines src:src -t compressed",
+        "jsdoc": "jsdoc -c .jsdoc.json",
+        "module": "nei build -sk 3c0776c04ad289211f2987f78737873c -module column",
+        "component": "nei build -sk a55cd53d266bfcc60759ef842bb6ac96 -module column"
+    },
+    "repository": {
+        "type": "git",
+        "url": "ssh://git@g.hz.netease.com:22222/edu-frontend/module-column.git"
+    },
+    "keywords": [
+        "edu",
+        "module",
+        "column"
+    ],
+    "author": "hzchenqinhui@corp.netease.com <hzchenqinhui@corp.netease.com@corp.netease.com>",
+    "license": "MIT",
+    "devDependencies": {
+        "gulp": "^3.9.1",
+        "replacestream": "^4.0.2",
+        "ink-docstrap": "^1.2.1"
+    }
+}
